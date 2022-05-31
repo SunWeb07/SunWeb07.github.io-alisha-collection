@@ -139,6 +139,7 @@ margin-bottom: 10px;
     justify-content: space-between;
     align-items: center;
 }
+
 .card-body {
   padding: 5px;
 }
@@ -227,3 +228,25 @@ background-color: #000;
     background-color: grey;
     cursor: pointer;
 }
+.table{
+    border: 1px solid grey;
+margin: 10px 0;
+    height: 60vh;
+   
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  tr{
+      border: 1px solid rgb(0, 0, 0);
+  }
+
+

@@ -1,3 +1,8 @@
+<?php require 'common.php'; 
+if(isset($_SESSION['email'])) {
+ header('location: products.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +23,7 @@
         </div>
         <nav>
             <ul>
-                <li ><a href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li> 
-                <li><a href="contact.html">About US</a></li>  
-                <li><a href="login.html">Log in</a></li> 
-                <li class="active"><a href="signup.html">Sign up</a></li> 
+            <?php include 'navbar.php'?>
                  
             </ul>
         </nav>
@@ -32,20 +33,36 @@
           <div class="wrapper">
             <div class="inner-warpper text-center">
               <h2 class="title">Sign up to your account</h2>
-              <form action="index.html" id="formvalidate">
+              <form action="signup_script.php" method="POST" id="formvalidate">
                 <div class="input-group">
-                  <label class="palceholder" for="userName">User Name</label>
-                  <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+                  <label class="palceholder" for="name">User Name</label>
+                  <input class="form-control" name="name" id="name" type="text" placeholder="" />
                   <span class="lighting"></span>
                 </div>
                 <div class="input-group">
-                  <label class="palceholder" for="userPassword">New Password</label>
-                  <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+                  <label class="palceholder" for="email">User Email</label>
+                  <input class="form-control" name="email" id="email" type="email" placeholder="" />
+                  <span class="lighting"></span>
+                </div>
+
+                <div class="input-group">
+                  <label class="palceholder" for="password">New Password</label>
+                  <input class="form-control" name="password" id="password" type="password" placeholder="" />
                   <span class="lighting"></span>
                 </div>
                 <div class="input-group">
-                    <label class="palceholder" for="userPassword">Confirm Password</label>
-                    <input class="form-control" name="userPassword" id="confirmPassword" type="password" placeholder="" />
+                    <label class="palceholder" for="contact">Contact</label>
+                    <input class="form-control" name="contact" id="contact" type="tel" placeholder="" />
+                    <span class="lighting"></span>
+                  </div>
+                  <div class="input-group">
+                    <label class="palceholder" for="city">City</label>
+                    <input class="form-control" name="city" id="city" type="text" placeholder="" />
+                    <span class="lighting"></span>
+                  </div>
+                  <div class="input-group">
+                    <label class="palceholder" for="address">Address</label>
+                    <input class="form-control" name="address" id="address" type="text" placeholder="" />
                     <span class="lighting"></span>
                   </div>
           
@@ -58,7 +75,7 @@
                 
                 </div>
                 <div class="signup-wrapper text-center">
-                    <a href="#">Already have an accout? <span class="text-primary">Log in</span></a>
+                    <a href="login.php">Already have an accout? <span class="text-primary">Log in</span></a>
                   </div>
               </form>
             </div>

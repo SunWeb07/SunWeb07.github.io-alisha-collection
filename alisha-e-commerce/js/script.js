@@ -22,26 +22,46 @@
   
     $("#formvalidate").validate({
       rules: {
-        userName: {
+        name: {
           required: true,
           minlength: 6
         },
-        userPassword: {
+        email: {
+          required: true,
+          
+        },
+        password: {
           required: true,
           minlength: 6
-        },confirmPassword: {
-            required:true,
-            minlength:6
-            ,
-            
+        },
+        city:{
+          required:true,
+        },
+        contact: {
+          required:true,
+          maxlength:10
+        },
+        address: {
+          required:true,
+          maxlength:50
+        },
+        newPassword:{
+          required:true,
+          minlength:6
+        },
+        rePassword:{
+          required:true,
+          minlength:6
+
         }
+       
       },
       messages: {
-        userName: {
+        name: {
           required: "Please enter your username.",
           minlength: "Please provide valid username."
         },
-        userPassword: {
+        password: {
           required: "Enter your password to Login.",
           minlength: "Incorrect login or password."
         }
